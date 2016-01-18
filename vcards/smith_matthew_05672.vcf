@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Smith;Matthew;;Mr
+FN:Matthew Smith
+EMAIL:MatthewBSmith@teleworm.us
+ADR:;;2492 Buck Drive;Stowe;Vermont;;USA
+BDAY:19690315
+CATEGORIES:O+
+REV:20151222
+END:VCARD

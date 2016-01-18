@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Jones;Mary;;Mrs
+FN:Mary Jones
+EMAIL:MaryPJones@gustr.com
+ADR:;;2240 Glendale Avenue;North Hollywood;California;;USA
+BDAY:19550602
+CATEGORIES:O+
+REV:20151222
+END:VCARD

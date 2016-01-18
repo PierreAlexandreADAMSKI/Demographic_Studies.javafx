@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Smith;David;;Mr
+FN:David Smith
+EMAIL:DavidMSmith@dayrep.com
+ADR:;;1452 Amethyst Drive;Okemos;Michigan;;USA
+BDAY:19610124
+CATEGORIES:O+
+REV:20151222
+END:VCARD

@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Norris;Glynis;;Mrs
+FN:Glynis Norris
+EMAIL:GlynisJNorris@superrito.com
+ADR:;;710 John Calvin Drive;Calumet City;Illinois;;USA
+BDAY:19410921
+CATEGORIES:A+
+REV:20151222
+END:VCARD

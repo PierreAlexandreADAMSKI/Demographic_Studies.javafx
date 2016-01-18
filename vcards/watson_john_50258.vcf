@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Watson;John;;Mr
+FN:John Watson
+EMAIL:JohnEWatson@einrot.com
+ADR:;;1319 Morningview Lane;Union;Iowa;;USA
+BDAY:19840707
+CATEGORIES:A+
+REV:20151222
+END:VCARD

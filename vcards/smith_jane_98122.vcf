@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Smith;Jane;;Mrs
+FN:Jane Smith
+EMAIL:JaneMSmith@armyspy.com
+ADR:;;3483 Hillcrest Drive;Seattle;Washington;;USA
+BDAY:19580910
+CATEGORIES:O+
+REV:20151222
+END:VCARD

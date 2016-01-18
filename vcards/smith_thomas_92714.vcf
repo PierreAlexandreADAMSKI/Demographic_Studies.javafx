@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Smith;Thomas;;Mr
+FN:Thomas Smith
+EMAIL:ThomasCSmith@einrot.com
+ADR:;;989 Hillcrest Lane;Irvine;California;;USA
+BDAY:19880325
+CATEGORIES:A+
+REV:20151222
+END:VCARD

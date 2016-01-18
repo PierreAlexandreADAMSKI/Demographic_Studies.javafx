@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Jones;Robert;;Mr
+FN:Robert Jones
+EMAIL:RobertMJones@rhyta.com
+ADR:;;2585 Raccoon Run;Seattle;Washington;;USA
+BDAY:19880116
+CATEGORIES:AB+
+REV:20151222
+END:VCARD

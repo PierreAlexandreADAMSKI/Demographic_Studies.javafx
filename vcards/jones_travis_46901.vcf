@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Jones;Travis;;Mr
+FN:Travis Jones
+EMAIL:TravisMJones@cuvox.de
+ADR:;;2733 Sugarfoot Lane;Kokomo;Indiana;;USA
+BDAY:19700213
+CATEGORIES:A+
+REV:20151222
+END:VCARD

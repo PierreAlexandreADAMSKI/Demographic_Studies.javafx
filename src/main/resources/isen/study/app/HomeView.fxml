@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isen.study.app.view.HomeViewController">
+
+
+   <children>
+      <Text layoutX="123.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Demographic Studies">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button layoutX="15.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleLaunchButton" prefHeight="26.0" prefWidth="569.0" text="Start">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="224.0" mnemonicParsing="false" onAction="#handleDirectoryChooserButton" prefHeight="26.0" prefWidth="569.0" text="Open files...">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Text fill="#cd2929" layoutX="111.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Load the folder you want to analyze," wrappingWidth="376.27134704589844">
+         <font>
+            <Font name="Andale Mono" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#cd2929" layoutX="216.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="then start analysis.">
+         <font>
+            <Font name="Andale Mono" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

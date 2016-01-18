@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Smith;Alan;;Mr
+FN:Alan Smith
+EMAIL:AlanCSmith@gustr.com
+ADR:;;4386 Watson Lane;Asheville;North Carolina;;USA
+BDAY:19930226
+CATEGORIES:O+
+REV:20151222
+END:VCARD

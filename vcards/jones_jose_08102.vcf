@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Jones;Jose;;Mr
+FN:Jose Jones
+EMAIL:JoseJJones@gustr.com
+ADR:;;4920 Moonlight Drive;Camden;New Jersey;;USA
+BDAY:19650405
+CATEGORIES:A+
+REV:20151222
+END:VCARD
