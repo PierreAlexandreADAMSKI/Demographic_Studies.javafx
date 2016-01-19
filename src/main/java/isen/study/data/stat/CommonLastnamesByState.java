@@ -2,15 +2,10 @@ package isen.study.data.stat;
 
 import isen.study.app.util.SortUtil;
 import isen.study.data.stat.interfaces.Stat;
-import javafx.scene.chart.XYChart;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
-import isen.study.data.stat.interfaces.Stat;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 /**
  * Created by Pierre-Alexandre Adamski and Maroin Al Dandachi.
@@ -80,7 +75,7 @@ public class CommonLastnamesByState implements Stat {
 		Set<Map.Entry<String, Map<String, Integer>>> statesSet = commonLastnamesByState.entrySet();
 		for (Map.Entry<String, Map<String, Integer>> entryStates : statesSet) {
 			final String state = entryStates.getKey();
-			commonLastnamesByState.replace(state,SortUtil.SortMapByValueNumber.sortByValue(entryStates.getValue()));
+			commonLastnamesByState.replace(state, SortUtil.MapSort.sortByValue(entryStates.getValue()));
 		}
 	}
 }

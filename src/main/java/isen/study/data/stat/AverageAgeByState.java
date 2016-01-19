@@ -81,6 +81,6 @@ public class AverageAgeByState implements Stat {
 			final Float age = resultSet.getFloat("age");
 			averageAgeByState.put(state, age);
 		}
-		averageAgeByState = SortUtil.SortMapByValueNumber.sortByValue(averageAgeByState);
+		averageAgeByState = SortUtil.MapSort.sortByValue(averageAgeByState);
 	}
 }

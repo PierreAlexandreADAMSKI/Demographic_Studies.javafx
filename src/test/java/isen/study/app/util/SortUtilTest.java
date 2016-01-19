@@ -13,7 +13,7 @@ public class SortUtilTest {
 			testMap.put( "SomeString" + random.nextInt(), random.nextInt());
 		}
 
-		testMap = SortUtil.SortMapByValueNumber.sortByValue( testMap );
+		testMap = SortUtil.MapSort.sortByValue( testMap );
 		Assert.assertEquals( 1000, testMap.size() );
 
 		Integer previous = null;

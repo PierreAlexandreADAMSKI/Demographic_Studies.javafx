@@ -51,7 +51,7 @@ public class MostCommonBloodType implements Stat {
 			final Integer total = resultSet.getInt("total");
 			mostCommonBloudType.put(bloodType, total);
 		}
-		mostCommonBloudType = SortUtil.SortMapByValueNumber.sortByValue(mostCommonBloudType);
+		mostCommonBloudType = SortUtil.MapSort.sortByValue(mostCommonBloudType);
 
 	}
 }

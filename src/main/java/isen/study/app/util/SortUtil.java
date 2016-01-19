@@ -1,8 +1,6 @@
 package isen.study.app.util;
 
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Stream;
 
 /**
@@ -13,16 +11,22 @@ public class SortUtil {
 	/**
 	 * found that useful "sort by value" on the web as open source code.
 	 */
-	public static class SortMapByValueNumber {
-		public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue( Map<K, V> map )
-		{
-			Map<K,V> result = new LinkedHashMap<>();
-			Stream<Map.Entry<K,V>> st = map.entrySet().stream();
-
-			st.sorted(Comparator.comparing(Map.Entry::getValue)).forEachOrdered(e ->result.put(e.getKey(),e.getValue()));
-
+	public static class MapSort {
+		public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map) {
+			List<Map.Entry<K, V>> list =
+					new LinkedList<>(map.entrySet());
+			//jdk 7 format, more readable
+			Collections.sort(list, new Comparator<Map.Entry<K, V>>() {
+				@Override
+				public int compare(Map.Entry<K, V> o1, Map.Entry<K, V> o2) {
+					return (o1.getValue()).compareTo(o2.getValue());
+				}
+			});
+			Map<K, V> result = new LinkedHashMap<>();
+			for (Map.Entry<K, V> entry : list) {
+				result.put(entry.getKey(), entry.getValue());
+			}
 			return result;
 		}
 	}
-
 }
