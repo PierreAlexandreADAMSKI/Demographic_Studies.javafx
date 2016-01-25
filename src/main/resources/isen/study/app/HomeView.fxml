@@ -14,7 +14,7 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Button layoutX="15.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleLaunchButton" prefHeight="26.0" prefWidth="569.0" text="Start">
+      <Button fx:id="launchButton" layoutX="15.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleLaunchButton" prefHeight="26.0" prefWidth="569.0" text="Start">
          <font>
             <Font size="24.0" />
          </font>
@@ -24,15 +24,5 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Text fill="#cd2929" layoutX="111.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Load the folder you want to analyze," wrappingWidth="376.27134704589844">
-         <font>
-            <Font name="Andale Mono" size="14.0" />
-         </font>
-      </Text>
-      <Text fill="#cd2929" layoutX="216.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="then start analysis.">
-         <font>
-            <Font name="Andale Mono" size="14.0" />
-         </font>
-      </Text>
    </children>
 </AnchorPane>

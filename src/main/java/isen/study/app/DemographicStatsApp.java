@@ -42,7 +42,11 @@ public class DemographicStatsApp extends Application{
 
 
 	public static void main(String[] args) throws Exception {
-		setDbService(BundleUtil.loadProperties("database"));
+		try {
+			setDbService(BundleUtil.loadProperties("database"));
+		}catch (DBServiceConnectionException e){
+			e.printStackTrace();
+		}
 		launch(args); // for javaFx
 	}
 

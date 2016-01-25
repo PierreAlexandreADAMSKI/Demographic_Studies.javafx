@@ -1,7 +1,7 @@
 package isen.study.service.vcard.exceptions;
 
 import isen.study.service.view.StageService;
-import isen.study.service.view.Warning;
+import isen.study.service.view.exceptions.Warning;
 
 /**
  * isen.study.service.vcard.exceptions Created by Pierre-Alexandre Adamski on 18/01/2016.
