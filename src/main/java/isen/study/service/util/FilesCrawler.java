@@ -16,6 +16,13 @@ import java.util.List;
  * Created by Pierre-Alexandre Adamski and Maroin Al Dandachi.
  */
 public class FilesCrawler {
+
+	/**
+	 *
+	 * @param sVCardsPath Path of the folder
+	 * @return We create a list containing the path of each vCard
+	 * @throws GetFilesExceptions
+	 */
 	public static List<Path> getFiles(String sVCardsPath) throws GetFilesExceptions {
 		List<Path> vCardPaths = new ArrayList<>();
 		if (!Files.notExists(Paths.get(sVCardsPath))) {

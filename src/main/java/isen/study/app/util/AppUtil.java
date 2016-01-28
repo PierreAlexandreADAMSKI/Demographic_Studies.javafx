@@ -15,7 +15,7 @@ import java.net.URL;
  */
 public class AppUtil {
 
-	public static void show(URL url) { //create Exceptions!!!
+	public static void showPrimary(URL url) { //create Exceptions!!!
 
 		try {
 			final FXMLLoader loader = new FXMLLoader(url);
@@ -28,15 +28,9 @@ public class AppUtil {
 		}
 	}
 
-	public static void launchStandAlone(URL url) throws IOException {
-		final FXMLLoader loader = new FXMLLoader(url);
-		final Scene scene = new Scene(loader.load());
-		StageService.addStandAloneStage(new Stage(), url.getFile());
-		StageService.getStandAloneStage(url.getFile()).setScene(scene);
-		StageService.getStandAloneStage(url.getFile()).show();
-	}
 
-	public static void launchStandAlone(URL url, StageStyle stageStyle) throws IOException {
+
+	public static void showStandAlone(URL url, StageStyle stageStyle) throws IOException {
 		final FXMLLoader loader = new FXMLLoader(url);
 		final Scene scene = new Scene(loader.load());
 		StageService.addStandAloneStage(new Stage(stageStyle), url.getFile());

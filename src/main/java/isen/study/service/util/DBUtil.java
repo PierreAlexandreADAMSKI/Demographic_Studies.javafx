@@ -8,6 +8,10 @@ import java.util.Properties;
  * isen.study.service.util Created by Pierre-Alexandre Adamski on 18/01/2016.
  */
 public class DBUtil {
+
+	/*
+	we set the parameters for the database
+	 */
 	public static MysqlDataSource dbInit(Properties properties){
 		MysqlDataSource dataSource = new MysqlDataSource();
 		dataSource.setServerName(properties.getProperty("db.server"));

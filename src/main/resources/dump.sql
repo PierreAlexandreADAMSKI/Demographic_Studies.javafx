@@ -1,6 +1,6 @@
 
 CREATE TABLE `person` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL UNIQUE AUTO_INCREMENT,
   `lastname` varchar(255) NOT NULL,
   `firstname` varchar(255) NOT NULL,
   `sex` varchar(45) NOT NULL,

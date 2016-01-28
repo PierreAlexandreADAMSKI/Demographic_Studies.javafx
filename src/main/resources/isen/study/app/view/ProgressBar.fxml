@@ -9,6 +9,5 @@
     <children>
         <Text fx:id="message" layoutX="83.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loading..." />
       <ProgressBar fx:id="progressBar" layoutX="7.0" layoutY="26.0" prefWidth="200.0" progress="0.0" />
-      <TextArea fx:id="log" layoutX="8.0" layoutY="48.0" prefHeight="74.0" prefWidth="197.0" />
     </children>
 </AnchorPane>

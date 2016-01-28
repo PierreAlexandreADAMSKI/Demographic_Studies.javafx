@@ -3,12 +3,10 @@ package isen.study.app.view;
 import isen.study.app.DemographicStatsApp;
 import isen.study.app.util.AppUtil;
 import isen.study.app.util.BundleUtil;
-import isen.study.app.view.listeners.ReaderChangeListener;
 import isen.study.service.vcard.VCardRecorderService;
 import isen.study.service.view.StageService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ProgressBar;
 import javafx.stage.*;
 
 import java.io.File;
@@ -33,7 +31,7 @@ public class HomeViewController {
 
 	@FXML
 	public void handleLaunchButton() {
-		AppUtil.show(DemographicStatsApp.class.getResource("view/StatOverview.fxml"));
+		AppUtil.showPrimary(DemographicStatsApp.class.getResource("view/StatOverview.fxml"));
 	}
 
 	@FXML
@@ -59,11 +57,12 @@ public class HomeViewController {
 				recorderService = new VCardRecorderService(DemographicStatsApp.getDbService(), currentFolderPath);
 
 				URL standAloneUrl = DemographicStatsApp.class.getResource("view/ProgressBar.fxml");
-				AppUtil.launchStandAlone(standAloneUrl, StageStyle.UTILITY);
+				AppUtil.showStandAlone(standAloneUrl, StageStyle.UTILITY);
 				StageService.getStandAloneStage(standAloneUrl.getFile()).setResizable(false);
 
 				recorderService.setOnSucceeded(event -> {
-					//progressBarController.message.setText("Done !");
+					//TODO tried to get the control of the progressbar from this controller but still not working
+					//TODO some day we'll get it working :)
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
@@ -75,8 +74,6 @@ public class HomeViewController {
 
 				Thread recorder = new Thread(recorderService);
 				recorder.setDaemon(true);
-				//progressBarController.progressBar.progressProperty().bind(recorderService.progressProperty());
-				//progressBarController.log.textProperty().bind(recorderService.messageProperty());
 				recorder.start();
 
 				DemographicStatsApp.setStatService(DemographicStatsApp.getDbService());

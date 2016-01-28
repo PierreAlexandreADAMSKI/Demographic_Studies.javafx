@@ -43,7 +43,7 @@ public class StatsOverviewController implements EventHandler<ActionEvent> {
 
 	@FXML
 	private void handleHomeButton() {
-		AppUtil.show(DemographicStatsApp.class.getResource("HomeView.fxml"));
+		AppUtil.showPrimary(DemographicStatsApp.class.getResource("HomeView.fxml"));
 	}
 
 	@FXML

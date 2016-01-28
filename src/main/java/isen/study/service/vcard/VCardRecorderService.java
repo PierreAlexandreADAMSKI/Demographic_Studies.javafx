@@ -1,6 +1,5 @@
 package isen.study.service.vcard;
 
-import isen.study.app.view.listeners.ReaderChangeListener;
 import isen.study.data.Person;
 import isen.study.service.database.DBService;
 import isen.study.service.util.FilesCrawler;
@@ -17,6 +16,7 @@ import java.util.List;
 public class VCardRecorderService extends Task<Void> {
     private String folderPath;
     private DBService dbService;
+    private double progress = 0;
 
     public VCardRecorderService(DBService dbService, String folderPath) {
         this.dbService = dbService;
@@ -24,15 +24,14 @@ public class VCardRecorderService extends Task<Void> {
     }
 
     public void readAndSaveCards() throws Exception {
-        Integer progressId = 0;
         List<Path> vCards = FilesCrawler.getFiles(folderPath);
         for (Path path : vCards){
             final Person person = VCardReader.read(path);
 	        dbService.save(person);
-            updateProgress((double)++progressId, (double)3000);
-            updateMessage(person.toString());
+            ++progress;
+            //updateProgress(++progressId, (double)3000);
+            //updateMessage(person.toString());
         }
-	    Thread.sleep(1000);
     }
 
     @Override

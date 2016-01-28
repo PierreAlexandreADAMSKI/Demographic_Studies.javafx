@@ -27,15 +27,17 @@ public class DemographicStatsApp extends Application{
 		//clear db for now while testing. in the coming release user
 		//must add as many cards as he wants before to clear them
 		mDbService = new DBService(DBUtil.dbInit(properties));
-		mDbService.clear();
+		//TODO debug
+		//mDbService.clear();
 	}
 
 	public static StatService getStatService() {
 		return mStatService;
 	}
 
-	public static void setStatService(DBService dbService) {
+	public static void setStatService(DBService dbService) throws DBServiceConnectionException {
 		//setup statservice on db
+		dbService.deleteDublon();
 		mStatService = new StatService(dbService);
 	}
 
@@ -54,6 +56,6 @@ public class DemographicStatsApp extends Application{
 	public void start(Stage primaryStage) throws Exception { //create exceptions!!!
 		StageService.getInstance().setPrimaryStage(primaryStage);
 		StageService.getInstance().getPrimaryStage().setTitle("Home");
-		AppUtil.show(DemographicStatsApp.class.getResource("HomeView.fxml"));
+		AppUtil.showPrimary(DemographicStatsApp.class.getResource("HomeView.fxml"));
 	}
 }
