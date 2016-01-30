@@ -37,7 +37,6 @@ public class DemographicStatsApp extends Application{
 
 	public static void setStatService(DBService dbService) throws DBServiceConnectionException {
 		//setup statservice on db
-		dbService.deleteDublon();
 		mStatService = new StatService(dbService);
 	}
 

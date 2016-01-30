@@ -20,7 +20,9 @@ public class DBService {
 					"(`lastname`, `firstname`, `sex`, `streetname`, `state`, `city`, `bloodtype`, `dateofbirth`) " +
 					"VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 	private static final String DELETE_QUERY = "DELETE FROM `isen_project`.`person` ";
-	private static final String DELETE_DUPLICATE = "ALTER IGNORE TABLE person ADD UNIQUE INDEX(lastname,firstname,sex,streetname,state,city,bloodtype,dateofbirth)";
+
+	//TODO found the right way to ignore duplicates
+	//private static final String DELETE_DUPLICATE = "ALTER IGNORE TABLE person ADD UNIQUE INDEX(lastname,firstname,sex,streetname,state,city,bloodtype,dateofbirth)";
 
 	private MysqlDataSource dataSource;
 
@@ -72,7 +74,7 @@ public class DBService {
 			throw new DBServiceConnectionException("DataBase Connection Failed for statement : \n" + DELETE_QUERY, e);
 		}
 	}
-
+/*
 	public void deleteDublon() throws DBServiceConnectionException {
 		try(Connection connection = this.dataSource.getConnection();
 		    PreparedStatement statement = connection.prepareStatement(DELETE_DUPLICATE)){
@@ -81,4 +83,5 @@ public class DBService {
 			throw new DBServiceConnectionException("DataBase Connection Failed for statement : \n" + DELETE_DUPLICATE, e);
 		}
 	}
+	*/
 }

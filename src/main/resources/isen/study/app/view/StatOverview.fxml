@@ -6,20 +6,18 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-            prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="isen.study.app.view.StatsOverviewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="156.0" prefWidth="134.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isen.study.app.view.StatsOverviewController">
     <children>
-        <Text layoutX="261.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StatOverview"/>
-        <MenuButton fx:id="menuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="MenuButton">
+        <Text layoutX="29.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StatOverview" />
+        <MenuButton fx:id="menuButton" layoutX="14.0" layoutY="110.0" mnemonicParsing="false" text="MenuButton">
             <items>
-                <MenuItem mnemonicParsing="false" text="Action 1"/>
-                <MenuItem mnemonicParsing="false" text="Action 2"/>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
             </items>
         </MenuButton>
-        <Button layoutX="300.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleHomeButton" text="Home">
+        <Button layoutX="19.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleHomeButton" text="Home">
             <font>
-                <Font size="24.0"/>
+                <Font size="24.0" />
             </font>
         </Button>
     </children>

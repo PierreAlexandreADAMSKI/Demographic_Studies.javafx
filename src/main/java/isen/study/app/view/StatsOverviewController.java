@@ -43,6 +43,14 @@ public class StatsOverviewController implements EventHandler<ActionEvent> {
 
 	@FXML
 	private void handleHomeButton() {
+		//clear DB when come back to the main menu
+		//DB doesn't get over crowded
+		try {
+			DemographicStatsApp.getDbService().clear();
+		} catch (DBServiceConnectionException e) {
+			e.printStackTrace();
+		}
+		//show main
 		AppUtil.showPrimary(DemographicStatsApp.class.getResource("HomeView.fxml"));
 	}
 

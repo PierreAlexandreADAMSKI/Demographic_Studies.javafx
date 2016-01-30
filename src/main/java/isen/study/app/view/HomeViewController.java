@@ -60,15 +60,25 @@ public class HomeViewController {
 				AppUtil.showStandAlone(standAloneUrl, StageStyle.UTILITY);
 				StageService.getStandAloneStage(standAloneUrl.getFile()).setResizable(false);
 
+				/**
+				 * event listener for the progress of the stat
+				 * when done should shut down progressBar window
+				 */
 				recorderService.setOnSucceeded(event -> {
 					//TODO tried to get the control of the progressbar from this controller but still not working
 					//TODO some day we'll get it working :)
+
+					//Sleep was to change message "Loading..." on progressBar to "Done!" for 1 seconde
+					//only possible by creating the progressBar stage from this controller for now
+					//until a better solution is found
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
+					//launchButton appears accessible
 					launchButton.setDisable(false);
+					//shut down progressBar
 					StageService.getStandAloneStage(standAloneUrl.getFile()).close();
 				});
 
