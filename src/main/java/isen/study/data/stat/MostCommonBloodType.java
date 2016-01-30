@@ -27,7 +27,6 @@ public class MostCommonBloodType implements Stat {
 
 	@Override
 	public String getDescription() {
-
 		String description = TITLE + "=====";
 		Set s = mostCommonBloudType.entrySet();
 		for (Object value1 : s) {
@@ -52,6 +51,5 @@ public class MostCommonBloodType implements Stat {
 			mostCommonBloudType.put(bloodType, total);
 		}
 		mostCommonBloudType = SortUtil.MapSort.sortByValue(mostCommonBloudType);
-
 	}
 }

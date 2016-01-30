@@ -61,10 +61,10 @@ public class VCardReader {
 
             }
         }
-		// TODO if line begins with "N:", then split the line with ";" separator
-		// TODO the first element is the lastName, the second is the first name
-		// TODO if the fourth element is equal to "Mr", set the sex to Sex.MALE,
-		// TODO return the person you got as parameter, with the new values
+		// if line begins with "N:", then split the line with ";" separator
+		// the first element is the lastName, the second is the first name
+		// if the fourth element is equal to "Mr", set the sex to Sex.MALE,
+		// return the person you got as parameter, with the new values
 		return person;
 	}
 
@@ -74,9 +74,9 @@ public class VCardReader {
 			person.setEmail(email);
             //System.out.println("Email " + person.getEmail());
 		}
-		// TODO if line begins with "EMAIL:", apply the correct substring to
+		// if line begins with "EMAIL:", apply the correct substring to
 		// retrieve the email
-		// TODO return the person you got as parameter, with the new values
+		// return the person you got as parameter, with the new values
 		// inside
 		return person;
 	}
@@ -94,12 +94,12 @@ public class VCardReader {
                 //System.out.println("Street Name : " + person.getStreetName()+ "\nCity : "+person.getCity()+ "\nState : " + person.getState());
 
             }
-		// TODO if line begins with "ADR:", then split the line with ";"
+		// if line begins with "ADR:", then split the line with ";"
 		// separator
-		// TODO the third element is the streetName
-		// TODO the fourth element is the city
-		// TODO the fifth element is the state
-		// TODO return the person you got as parameter, with the new values
+		// the third element is the streetName
+		// the fourth element is the city
+		// the fifth element is the state
+		// return the person you got as parameter, with the new values
 		// inside
 		return person;
 	}
@@ -113,9 +113,9 @@ public class VCardReader {
 
             //System.out.println("Date Of Birth : "+dateOfBirth.toString());
         }
-        // TODO if line begins with "BDAY:", parse the date thanks to
+        // if line begins with "BDAY:", parse the date thanks to
 		// LocalDate.parse() and the given formatter
-		// TODO return the person you got as parameter, with the new values
+		// return the person you got as parameter, with the new values
 		// inside
 		return person;
 	}
@@ -127,9 +127,9 @@ public class VCardReader {
             person.setBloodType(bloodType);
             //System.out.println("Blood Type : "+bloodType);
         }
-        // TODO if line begins with "CATEGORIES:", apply the correct substring
+        // if line begins with "CATEGORIES:", apply the correct substring
 		// to retrieve the email
-		// TODO return the person you got as parameter, with the new values
+		// return the person you got as parameter, with the new values
 		// inside
 		return person;
 	}

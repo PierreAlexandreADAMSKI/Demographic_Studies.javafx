@@ -10,23 +10,24 @@ public class SortUtil {
 
 	/**
 	 * found that useful "sort by value" on the web as open source code.
+	 * using Nested Class let you set a util set of class for nyKing of Sorting in the project
+	 * to be continued...
 	 */
+
 	public static class MapSort {
+
 		public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map) {
-			List<Map.Entry<K, V>> list =
-					new LinkedList<>(map.entrySet());
-			//jdk 7 format, more readable
-			Collections.sort(list, new Comparator<Map.Entry<K, V>>() {
-				@Override
-				public int compare(Map.Entry<K, V> o1, Map.Entry<K, V> o2) {
-					return (o1.getValue()).compareTo(o2.getValue());
-				}
-			});
+			List<Map.Entry<K, V>> list = new LinkedList<>(map.entrySet());
+
+			Collections.sort(list, (o1, o2) -> (o1.getValue()).compareTo(o2.getValue()));
+
 			Map<K, V> result = new LinkedHashMap<>();
 			for (Map.Entry<K, V> entry : list) {
 				result.put(entry.getKey(), entry.getValue());
 			}
+
 			return result;
 		}
+
 	}
 }

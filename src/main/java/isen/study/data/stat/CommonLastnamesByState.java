@@ -17,6 +17,8 @@ public class CommonLastnamesByState implements Stat {
 	private static final String QUERY = "SELECT lastname, state, count(id)as total FROM person GROUP BY " +
 			"state,lastname HAVING total > 2 ORDER BY total DESC, state";
 
+	//Complex double Map tree. let you be sure to have only 1 set of name by state by stage
+	//2 sets of name can then only be attach to one particular state
 	public static Map<String, Map<String, Integer>> commonLastnamesByState = new HashMap<>();
 
 	@Override
@@ -63,18 +65,29 @@ public class CommonLastnamesByState implements Stat {
 			final String state = resultSet.getString("state");
 			final String lastname = resultSet.getString("lastname");
 			final Integer total = resultSet.getInt("total");
+
 			if(commonLastnamesByState.containsKey(state)) {
+				//the query doesn't let you have twice the same name in 1 set of names
+				//no need to re-control it
 				commonLastnamesByState.get(state).put(lastname, total);
 			}else {
 				//just to initialize the sub-Map of lastname and total
 				tempMap.put(lastname,total);
+				//should only use put be we are never so sure!
 				commonLastnamesByState.putIfAbsent(state, new HashMap<>(tempMap));
+				//then clear it and keep going
 				tempMap.clear();
 			}
 		}
+
+		/**
+		 * just a simple sort for the graphic to be more readable
+		 */
+		//set of names Sets iterations
 		Set<Map.Entry<String, Map<String, Integer>>> statesSet = commonLastnamesByState.entrySet();
 		for (Map.Entry<String, Map<String, Integer>> entryStates : statesSet) {
 			final String state = entryStates.getKey();
+			//see sortByValue(
 			commonLastnamesByState.replace(state, SortUtil.MapSort.sortByValue(entryStates.getValue()));
 		}
 	}
